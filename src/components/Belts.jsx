@@ -44,17 +44,10 @@ const Belts = () => {
               alt={`Cinto ${belt.id}`}
             />
             <div className="pb-2">
-              <a href="/home">
-                <h5 className="text-xl font-bold tracking-tight text-gray-900 dark:text-white">
-                  {`Item ${belt.id}`}
-                </h5>
-              </a>
+                <h5 className="mb-2 text-xl font-bold tracking-tight text-gray-900 dark:text-white">{`Item ${belt.id}`}</h5>
+                <p className="mb-3 font-normal text-gray-700 dark:text-gray-400">  {belt.price ? `R$${belt.price.toFixed(2)}` : "Preço indisponível"}</p>
             </div>
-            <div className="pb-4">
-              <span className="text-sm text-center font-light text-gray-900 dark:text-white">
-                {belt.price ? `R$${belt.price.toFixed(2)}` : "Preço indisponível"}
-              </span>
-            </div>
+            
             <div className="">
               <a
                 href="/home"
