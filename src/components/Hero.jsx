@@ -1,11 +1,12 @@
 import React from 'react';
+import heroImage from "../assets/img/Hero.png"
 
 const Hero = () => {
   return (
     <div>
       <section
         className="relative bg-center bg-no-repeat bg-cover h-screen"
-        style={{ backgroundImage: "url('/assets/img/Hero.png')" }}
+        style={{  backgroundImage: `url(${heroImage})`}}
       >
         {/* Black overlay */}
         <div className="absolute inset-0 bg-black opacity-50"></div>

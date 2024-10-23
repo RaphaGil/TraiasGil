@@ -1,4 +1,5 @@
 import React, { useState, useEffect } from "react";
+import Logo from "../assets/logo.png"; 
 import { FaFacebookF, FaInstagram, FaWhatsapp } from "react-icons/fa"; // Importing icons
 
 const Navbar = () => {
@@ -19,9 +20,9 @@ const Navbar = () => {
   return (
     <nav className={`fixed w-full z-30 top-0 pr-4 transition duration-300 ${scrolled ? "bg-brown-800 bg-opacity-40" : "bg-transparent"}`}>
       <div className="max-w-screen-xl flex flex-wrap items-center justify-between mx-auto">
-        <a href="/home" className="flex items-center ">
+        <a href="/Home" className="flex items-center ">
           <img
-            src="/logo.png"
+            src={Logo}
             className="h-36 "
             alt="TraiasGil Logo"
           />

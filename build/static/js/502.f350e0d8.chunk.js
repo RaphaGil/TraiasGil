@@ -1,0 +1,1 @@
+"use strict";(self.webpackChunkmy_app=self.webpackChunkmy_app||[]).push([[502],{502:(e,p,s)=>{e.exports=s.p+"static/media/belts1.9e47ee182795367793b9.png"}}]);
