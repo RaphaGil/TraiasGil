@@ -1,7 +1,7 @@
 [
   {
     "id": 1,
-    "image": "./assets/img/belts/belts1.png",
+    "image": ".assets/img/belts/belts1.png",
     "price": 400.00,
     "category": "cinto"
   },
