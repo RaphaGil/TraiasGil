@@ -1,0 +1,190 @@
+[
+  {
+    "id": 1,
+    "image": "./assets/img/belts/belts1.png",
+    "price": 400.00,
+    "category": "cinto"
+  },
+  {
+    "id": 2,
+    "image": "./assets/img/belts/belts2.png",
+    "price": 400.00,
+    "category": "cinto"
+  },
+  {
+    "id": 3,
+    "image": "./assets/img/belts/belts3.png",
+    "price": 250.00,
+    "category": "cinto"
+  },
+  {
+    "id": 4,
+    "image": "./assets/img/belts/belts4.png",
+    "price": 250.00,
+    "category": "cinto"
+  },
+  {
+    "id": 5,
+    "image": "./assets/img/belts/belts5.png",
+    "price": 250.00,
+    "category": "cinto"
+  },
+  {
+    "id": 6,
+    "image": "./assets/img/belts/belts6.png",
+    "price": 400.00,
+    "category": "cinto"
+  },
+  {
+    "id": 7,
+    "image": "./assets/img/belts/belts7.png",
+    "price": 250.00,
+    "category": "cinto"
+  },
+  {
+    "id": 8,
+    "image": "./assets/img/belts/belts8.png",
+    "price": 400.00,
+    "category": "cinto"
+  },
+  {
+    "id": 9,
+    "image": "./assets/img/belts/belts9.png",
+    "price": 400.00,
+    "category": "cinto"
+  },
+  {
+    "id": 10,
+    "image": "./assets/img/belts/belts10.png",
+    "price": 250.00,
+    "category": "cinto"
+  },
+  {
+    "id": 11,
+    "image": "./assets/img/belts/belts11.png",
+    "price": 400.00,
+    "category": "cinto"
+  },
+  {
+    "id": 12,
+    "image": "./assets/img/belts/belts12.png",
+    "price": 250.00,
+    "category": "cinto"
+  },
+
+  {
+    "id": 13,
+    "image": "./assets/img/belts/belts13.png",
+    "price": 400.00,
+    "category": "cinto"
+  },
+  {
+    "id": 14,
+    "image": "./assets/img/belts/belts14.png",
+    "price": 400.00,
+    "category": "cinto"
+  },
+  {
+    "id": 15,
+    "image": "./assets/img/belts/belts15.png",
+    "price": 250.00,
+    "category": "cinto"
+  },
+  {
+    "id": 16,
+    "image": "./assets/img/belts/belts16.png",
+    "price": 250.00,
+    "category": "cinto"
+  },
+  {
+    "id": 17,
+    "image": "./assets/img/belts/belts17.png",
+    "price": 250.00,
+    "category": "cinto"
+  },
+  {
+    "id": 18,
+    "image": "./assets/img/belts/belts18.png",
+    "price": 400.00,
+    "category": "cinto"
+  },
+  {
+    "id": 19,
+    "image": "./assets/img/Traias1.png",
+    "price": 400.00,
+    "category": "cinto"
+  },
+  {
+    "id": 20,
+    "image": "./assets/img/Traias1.png",
+    "price": 400.00,
+    "category": "cinto"
+  },
+  {
+    "id": 21,
+    "image": "./assets/img/Traias1.png",
+    "price": 400.00,
+    "category": "cinto"
+  },
+  {
+    "id": 22,
+    "image": "./assets/img/Traias1.png",
+    "price": 400.00,
+    "category": "cinto"
+  },
+  {
+    "id": 23,
+    "image": "./assets/img/acessories/acessories.png",
+    "price": 0.00,
+    "category": "acessorios"
+  },
+  {
+    "id": 24,
+    "image": "./assets/img/acessories/acessories1.png",
+    "price": 150.00,
+    "category": "acessorios"
+  },
+  {
+    "id": 25,
+    "image": "./assets/img/acessories/acessories2.png",
+    "price": 150.00,
+    "category": "acessorios"
+  },
+  {
+    "id": 26,
+    "image": "./assets/img/acessories/acessories3.png",
+    "price": 150.00,
+    "category": "acessorios"
+  },
+  {
+    "id": 27,
+    "image": "./assets/img/acessories/acessories4.png",
+    "price": 200.00,
+    "category": "acessorios"
+  },
+  {
+    "id": 28,
+    "image": "./assets/img/acessories/acessories5.png",
+    "price": 150.00,
+    "category": "acessorios"
+  },
+{
+  "id": 29,
+  "image": "./assets/img/Traia.jpg",
+  "price": 300.00,
+  "category": "traias"
+},
+{
+  "id": 30,
+  "image": "./assets/img/Traia1.jpg",
+  "price": 300.00,
+  "category": "traias"
+},
+{
+  "id": 31,
+  "image": "./assets/img/TraiasCavalos.jpg",
+  "price": 500.00,
+  "category": "traias"
+}
+
+]
