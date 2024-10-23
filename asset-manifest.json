@@ -1,0 +1,15 @@
+{
+  "files": {
+    "main.css": "/GilTest/static/css/main.32a550d1.css",
+    "main.js": "/GilTest/static/js/main.be350008.js",
+    "static/js/488.9c92ff38.chunk.js": "/GilTest/static/js/488.9c92ff38.chunk.js",
+    "index.html": "/GilTest/index.html",
+    "main.32a550d1.css.map": "/GilTest/static/css/main.32a550d1.css.map",
+    "main.be350008.js.map": "/GilTest/static/js/main.be350008.js.map",
+    "488.9c92ff38.chunk.js.map": "/GilTest/static/js/488.9c92ff38.chunk.js.map"
+  },
+  "entrypoints": [
+    "static/css/main.32a550d1.css",
+    "static/js/main.be350008.js"
+  ]
+}
