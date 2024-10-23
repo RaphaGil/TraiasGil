@@ -3,7 +3,7 @@ import React from "react";
 const Advertising = () => {
   const StarIcon = () => (
     <svg
-      className="w-3 h-3 text-gray-900 dark:text-gray-400 inline-block"
+      className="w-3 h-3 text-gray-900  inline-block"
       xmlns="http://www.w3.org/2000/svg"
       fill="currentColor"
       viewBox="0 0 24 24"
@@ -13,11 +13,11 @@ const Advertising = () => {
   );
 
   return (
-    <div className="flex flex-wrap lg:flex-nowrap justify-around md:gap-6 py-32">
+    <div className="flex flex-wrap lg:flex-nowrap justify-around p-10 md:gap-6 py-32">
       {/* First Card */}
       <div className="flex flex-col justify-between md:max-w-sm w-full p-6 bg-amber-300 border border-gray-200 rounded-lg shadow  h-64 mx-2 my-2">
         <svg
-          className="w-7 h-7 text-gray-900 dark:text-gray-400"
+          className="w-7 h-7 text-gray-900 "
           xmlns="http://www.w3.org/2000/svg"
           fill="none"
           viewBox="0 0 24 24"
@@ -32,18 +32,18 @@ const Advertising = () => {
         </svg>
 
         <a href="/home">
-          <h5 className="mb-2 text-2xl font-semibold tracking-tight text-gray-900 dark:text-white">
+          <h5 className="mb-2 text-2xl font-semibold tracking-tight text-gray-900 ">
             Entrega em Todo o Brasil
           </h5>
         </a>
-        <p className="mb-3 font-normal text-gray-900 dark:text-gray-400">
+        <p className="mb-3 font-normal text-gray-900 ">
           "Fazemos entregas para todo o Brasil! Receba nossos produtos
           diretamente em sua casa, onde quer que você esteja."
         </p>
       </div>
 
       {/* Second Card */}
-      <div className="flex flex-col justify-between md:max-w-sm w-full p-6 bg-amber-300 border border-gray-200 rounded-lg shadow dark:bg-gray-800 dark:border-gray-700 h-64 mx-2 my-2">
+      <div className="flex flex-col justify-between md:max-w-sm w-full p-6 bg-amber-300 border border-gray-200 rounded-lg shadow  h-64 mx-2 my-2">
         <div className="flex mb-3">
           <StarIcon />
           <StarIcon />
@@ -53,19 +53,19 @@ const Advertising = () => {
         </div>
 
         <a href="/home">
-          <h5 className="mb-2 text-2xl font-semibold tracking-tight text-gray-900 dark:text-white">
+          <h5 className="mb-2 text-2xl font-semibold tracking-tight text-gray-900 ">
             A Gosto Do Cliente
           </h5>
         </a>
-        <p className="mb-3 font-normal text-gray-900 dark:text-gray-400">
+        <p className="mb-3 font-normal text-gray-900 ">
           "Transformamos suas ideias em produtos personalizados com excelência."
         </p>
       </div>
 
       {/* Fourth Card */}
-      <div className="flex flex-col justify-between md:max-w-sm  w-full p-6 bg-amber-300 border border-gray-200 rounded-lg shadow dark:bg-gray-800 dark:border-gray-700 h-64 mx-2 my-2">
+      <div className="flex flex-col justify-between md:max-w-sm  w-full p-6 bg-amber-300 border border-gray-200 rounded-lg shadow  h-64 mx-2 my-2">
         <svg
-          className="w-7 h-7 text-gray-900 dark:text-gray-400"
+          className="w-7 h-7 text-gray-900 "
           xmlns="http://www.w3.org/2000/svg"
           fill="none"
           viewBox="0 0 24 24"
@@ -85,19 +85,19 @@ const Advertising = () => {
         </svg>
 
         <a href="/home">
-          <h5 className="mb-2 text-2xl font-semibold tracking-tight text-gray-900 dark:text-white">
+          <h5 className="mb-2 text-2xl font-semibold tracking-tight text-gray-900 ">
             Feito a Mão e Couro
           </h5>
         </a>
-        <p className="mb-3 font-normal text-gray-900 dark:text-gray-400">
+        <p className="mb-3 font-normal text-gray-900 ">
           "Produtos feitos à mão em couro, com atenção aos detalhes e
           qualidade."
         </p>
       </div>
       {/* Third Card */}
-      <div className="flex flex-col justify-between md:max-w-sm  w-full p-6 bg-amber-300 border border-gray-200 rounded-lg shadow dark:bg-gray-800 dark:border-gray-700 h-64 mx-2 my-2">
+      <div className="flex flex-col justify-between md:max-w-sm  w-full p-6 bg-amber-300 border border-gray-200 rounded-lg shadow  h-64 mx-2 my-2">
         <svg
-          className="w-7 h-7 text-gray-900 dark:text-gray-400"
+          className="w-7 h-7 text-gray-900"
           xmlns="http://www.w3.org/2000/svg"
           fill="none"
           viewBox="0 0 24 24"
@@ -113,11 +113,11 @@ const Advertising = () => {
         </svg>
 
         <a href="/home">
-          <h5 className="mb-2 text-2xl font-semibold tracking-tight text-gray-900 dark:text-white">
+          <h5 className="mb-2 text-2xl font-semibold tracking-tight text-gray-900 ">
             Aceito encomenda
           </h5>
         </a>
-        <p className="mb-3 font-normal text-gray-900 dark:text-gray-400">
+        <p className="mb-3 font-normal text-gray-900 ">
           "Entre em contato conosco e compartilhe sua ideia!"
         </p>
       </div>
