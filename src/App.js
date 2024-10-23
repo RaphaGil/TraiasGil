@@ -2,9 +2,9 @@ import NavBar from './components/Navbar';
 import Hero from './components/Hero';
 import './App.css';
 import Advertasing from './components/Advertasing';
-import Belts from './components/Belts';
 import NossosProdutos from './components/OurProducts';
-import Acessories from './components/Acessories';
+import Belts from './pages/Belts';
+import Footer from './components/Footer';
 
 function App() {
   return (
@@ -14,7 +14,7 @@ function App() {
       <Advertasing />
       <NossosProdutos />
       <Belts />
-      <Acessories />
+      <Footer />
     </div>
   );
 }
