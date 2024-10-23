@@ -15,7 +15,7 @@ const Advertising = () => {
   return (
     <div className="flex flex-wrap lg:flex-nowrap justify-around p-10 md:gap-4 py-28">
       {/* First Card */}
-      <div className="flex flex-col justify-between md:max-w-sm w-full p-6 bg-amber-300 border border-gray-200 rounded-lg shadow  h-64 mx-2 my-2">
+      <div className="flex flex-col justify-between md:max-w-sm w-full p-6 bg-amber-300 border border-gray-200 rounded-sm shadow  h-64 mx-2 my-2">
         <svg
           className="w-7 h-7 text-gray-900 "
           xmlns="http://www.w3.org/2000/svg"

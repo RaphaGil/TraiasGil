@@ -108,6 +108,18 @@
     "price": 400.00,
     "category": "cinto"
   },
+  {
+    "id": 19,
+    "image": "belts19.png",
+    "price": 400.00,
+    "category": "cinto"
+  },
+  {
+    "id": 20,
+    "image": "belts20.png",
+    "price": 400.00,
+    "category": "cinto"
+  },
  
   {
     "id": 23,

@@ -48,15 +48,15 @@ const Belts = () => {
                 <p className="mb-3 font-normal text-gray-400">  {belt.price ? `R$${belt.price.toFixed(2)}` : "Preço indisponível"}</p>
             </div>
             
-            <div className="">
+            {/* <div className="">
               <a
                 href="/home"
-                className="inline-flex justify-center items-center py-3 px-5 text-base font-medium text-center text-gray-900 rounded-lg bg-amber-300
+                className="inline-flex justify-center items-center py-3 px-5 text-base font-medium text-center text-gray-900 rounded-sm bg-amber-300
                 hover:bg-amber-200 focus:ring-4 focus:ring-amber-200 dark:focus:ring-amber-200 mb-6"
               >
                 Comprar
               </a>
-            </div>
+            </div> */}
           </div>
         ))}
       </div>
