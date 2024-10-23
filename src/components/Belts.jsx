@@ -24,7 +24,7 @@ const Belts = () => {
       </div>
       <div
         id="cintos"
-        className="grid grid-cols-2 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-6 p-10"
+        className="grid grid-cols-2 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-6 p-4"
       >
         {belts.map((belt) => (
           <div key={belt.id} className="border border-gray-300 shadow-md rounded-lg">
@@ -33,17 +33,20 @@ const Belts = () => {
               src={belt.image}
               alt={`Cinto ${belt.id}`}
             />
-            <div className="flex justify-between items-center p-4">
+            <div className="pb-2">
               <a href="/home">
                 <h5 className="text-xl font-bold tracking-tight text-gray-900 dark:text-white">
                   {`Item ${belt.id}`}
                 </h5>
               </a>
-              <span className="text-sm font-light text-gray-900 dark:text-white">
+           
+            </div>
+            <div className=" pb-4">
+              <span className="text-sm text-center font-light text-gray-900 dark:text-white">
                 R${belt.price.toFixed(2)}
               </span>
             </div>
-            <div className="flex flex-col space-y-32 px-12 sm:flex-row sm:justify-center mt-4">
+            <div className="">
               <a
                 href="/home"
                 className="inline-flex justify-center items-center py-3 px-5 text-base font-medium text-center text-gray-900 rounded-lg bg-amber-300

@@ -18,7 +18,7 @@ const Hero = () => {
           <p className="mb-8 text-lg font-normal text-gray-200 lg:text-xl sm:px-16 lg:px-48">
             Variedades de produtos em couro a gosto do cliente e rapida entrega.
           </p>
-          <div className="flex flex-col space-y-32 px-36 sm:flex-row sm:justify-center ">
+          <div className="flex flex-col space-y-32 px-24 md:px-36 sm:flex-row sm:justify-center ">
             <a
               href="/home"
               className="inline-flex justify-center items-center py-3 px-5 text-base font-medium text-center text-gray-900 rounded-lg bg-amber-300 hover:bg-amber-100 focus:ring-4 focus:ring-amber-300 dark:focus:ring-amber-300"
