@@ -55,8 +55,8 @@ const Belts = () => {
                   loading="lazy"
                 />
                 <div className="pt-2">
-                  <h5 className="mb-2 text-xl font-bold text-white">{`Item ${belt.id}`}</h5>
-                  <p className="mb-3 font-normal text-gray-400">{belt.price ? `R$${belt.price.toFixed(2)}` : "Preço indisponível"}</p>
+                  <h5 className="mb-2 text-md font-bold text-white">{`Item ${belt.id}`}</h5>
+                  <p className="mb-3 text-sm font-normal text-gray-400">{belt.price ? `R$${belt.price.toFixed(2)}` : "Preço indisponível"}</p>
                 </div>
               </div>
             ))}

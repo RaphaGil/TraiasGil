@@ -5,11 +5,12 @@ import Logo from "../assets/logo.png";
 
 const Footer = () => {
   return (
-    <footer className="bg-gray-900 rounded-lg shadow">
+    <footer className="bg-gray-900 ">
       <div className="w-full max-w-screen-xl mx-auto p-4 md:py-8">
-        <div className="sm:flex sm:items-center sm:justify-between">          
-          <img src={Logo} className="h-32 md:h-44" alt="Flowbite Logo" />
-          <ul className="flex flex-wrap items-center mb-6 text-sm font-medium text-gray-500 sm:mb-0 dark:text-gray-400">
+        {/* Flex container for logo and links */}
+        <div className="flex flex-col items-center md:flex-row md:justify-between">
+          <img src={Logo} className="h-44 mb-4 md:mb-0" alt="Flowbite Logo" />
+          <ul className="flex flex-wrap items-center justify-center mb-8 text-sm font-medium text-gray-500 sm:mb-0 dark:text-gray-400">
             <li>
               <a href="#" className="hover:underline hover:text-amber-200 me-4 md:me-6">Sobre</a>
             </li>
@@ -25,6 +26,7 @@ const Footer = () => {
           </ul>
         </div>
         
+        {/* Flex container for icons */}
         <div className='flex justify-center items-center w-full py-4'>
           <FontAwesomeIcon icon={faPinterest} className='text-white text-3xl mx-2' />
           <FontAwesomeIcon icon={faCcMastercard} className='text-white text-3xl mx-2' />
@@ -45,4 +47,3 @@ const Footer = () => {
 };
 
 export default Footer;
-
