@@ -34,16 +34,16 @@ const Belts = () => {
       </div>
       <div
         id="cintos"
-        className="grid grid-cols-2 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-4 md:gap-6 p-10 "
+        className="grid grid-cols-2 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-4 md:gap-6 md:p-10 p-4 "
       >
         {belts.map((belt) => (
           <div key={belt.id} className=" shadow-sm rounded-lg transform transition-transform duration-300 hover:scale-105 bg-gray-800">
             <img
-              className="rounded-t-lg mb-4 "
+              className="rounded-t-lg"
               src={belt.image}
               alt={`Cinto ${belt.id}`}
             />
-            <div className="p-4 ">
+            <div className="pt-2">
                 <h5 className="mb-2 text-xl font-bold  text-white">{`Item ${belt.id}`}</h5>
                 <p className="mb-3 font-normal text-gray-400">  {belt.price ? `R$${belt.price.toFixed(2)}` : "Preço indisponível"}</p>
             </div>
