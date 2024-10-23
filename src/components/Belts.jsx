@@ -43,8 +43,8 @@ const Belts = () => {
               src={belt.image}
               alt={`Cinto ${belt.id}`}
             />
-            <div className="p-8">
-                <h5 className="mb-2 text-xl font-bold tracking-tight text-gray-900 dark:text-white">{`Item ${belt.id}`}</h5>
+            <div className="p-4">
+                <h5 className="mb-2 text-xl font-bold  text-gray-900 dark:text-gray-800">{`Item ${belt.id}`}</h5>
                 <p className="mb-3 font-normal text-gray-700 dark:text-gray-400">  {belt.price ? `R$${belt.price.toFixed(2)}` : "Preço indisponível"}</p>
             </div>
             
