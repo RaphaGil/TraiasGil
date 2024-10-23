@@ -34,7 +34,7 @@ const Belts = () => {
       </div>
       <div
         id="cintos"
-        className="grid grid-cols-2 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-6 p-10"
+        className="grid grid-cols-2 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-4 md:gap-6 p-4"
       >
         {belts.map((belt) => (
           <div key={belt.id} className="border border-gray-300 shadow-md rounded-lg">
