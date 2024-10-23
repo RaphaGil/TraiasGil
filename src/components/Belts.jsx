@@ -6,15 +6,25 @@ const Belts = () => {
 
   useEffect(() => {
     const filteredBelts = beltData.filter((belt) => belt.category === "cinto");
-    const beltsWithImages = filteredBelts.map(async (belt) => {
-      const image = await import(`../assets/img/belts/${belt.image}`);
-      return {
-        ...belt,
-        image: image.default, // Use .default to get the path
-      };
-    });
+    const beltsWithImages = Promise.all(filteredBelts.map(async (belt) => {
+      try {
+        const image = await import(`../assets/img/belts/${belt.image}`);
+        return {
+          ...belt,
+          image: image.default, // Use .default to get the path
+        };
+      } catch (error) {
+        console.error(`Erro ao carregar a imagem para o cinto ${belt.id}:`, error);
+        return {
+          ...belt,
+          image: '/path/to/default-image.png', // Optional default image in case of error
+        };
+      }
+    }));
 
-    Promise.all(beltsWithImages).then(setBelts);
+    beltsWithImages.then(setBelts).catch(error => {
+      console.error("Erro ao processar cinturões:", error);
+    });
   }, []); // Runs only once on component mount
 
   return (
@@ -24,7 +34,7 @@ const Belts = () => {
       </div>
       <div
         id="cintos"
-        className="grid grid-cols-2 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-6 p-4"
+        className="grid grid-cols-2 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-6 p-10"
       >
         {belts.map((belt) => (
           <div key={belt.id} className="border border-gray-300 shadow-md rounded-lg">
@@ -39,11 +49,10 @@ const Belts = () => {
                   {`Item ${belt.id}`}
                 </h5>
               </a>
-           
             </div>
-            <div className=" pb-4">
+            <div className="pb-4">
               <span className="text-sm text-center font-light text-gray-900 dark:text-white">
-                R${belt.price.toFixed(2)}
+                {belt.price ? `R$${belt.price.toFixed(2)}` : "Preço indisponível"}
               </span>
             </div>
             <div className="">
