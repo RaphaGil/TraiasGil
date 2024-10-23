@@ -1,6 +1,7 @@
 {
   "name": "my-app",
   "version": "0.1.0",
+  "homepage": "https://raphagil.github.io/GilTest/",
   "private": true,
   "dependencies": {
     "cra-template": "1.2.0",
@@ -9,7 +10,7 @@
     "react-scripts": "5.0.1",
     "web-vitals": "^4.2.4"
   },
-  "homepage": "https://raphagil.github.io/GilTest/",
+
   "scripts": {
     "start": "react-scripts start",
     "build": "react-scripts build",
