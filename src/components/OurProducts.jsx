@@ -1,43 +1,65 @@
-import React from 'react';
-import beltImage from "../assets/img/belt.png"; // Importing images
-import mobileCaseImage from "../assets/img/mobilecase.png"; // Importing images
-import traisImage from "../assets/img/Traias.png"; // Importing images
+import React, { useEffect, useRef } from 'react';
+import beltImage from "../assets/img/belt.png";
+import mobileCaseImage from "../assets/img/mobilecase.png";
+import traisImage from "../assets/img/Traias.png";
+import './OurProducts.css'; // Import the CSS file for animations
 
 const OurProducts = () => {
+  const imageRefs = useRef([]);
+
   // Sample product data
   const products = [
     {
       id: 1,
-      image: beltImage, // Use the imported image
+      image: beltImage,
       title: "Cintos",
       description: "Cintos com detalhes conforme o cliente quer.",
-      href: './Belts' // Updated to use a valid path
+      href: './Belts'
     },
     {
       id: 2,
-      image: mobileCaseImage, // Use the imported image
+      image: mobileCaseImage,
       title: "Acessórios",
       description: "Explore os últimos avanços em tecnologia empresarial.",
-      href: './accessories' // Updated to use a valid path
+      href: './accessories'
     },
     {
       id: 3,
-      image: traisImage, // Use the imported image
+      image: traisImage,
       title: "Traias de Cavalo",
       description: "Veja as tendências que moldam a tecnologia hoje.",
-      href: './accessories' // Empty href if no link available
+      href: './accessories'
     },
   ];
 
+  // Set up Intersection Observer to add "slide-in" class to images
+  useEffect(() => {
+    const observer = new IntersectionObserver(
+      entries => {
+        entries.forEach(entry => {
+          if (entry.isIntersecting) {
+            entry.target.classList.add('slide-in');
+          }
+        });
+      },
+      { threshold: 0.3 }
+    );
+
+    imageRefs.current.forEach(ref => ref && observer.observe(ref));
+    return () => observer.disconnect();
+  }, []);
+
   return (
     <div className='p-5'>
-      <h2 className='text-center text-3xl mb-5'>Nossa variedade de produtos</h2>
-      
       <div className='flex flex-wrap justify-center gap-10'>
-        {products.map(product => (
-          <div key={product.id} className="max-w-sm bg-gray-800 dark:border-gray-700 rounded-lg overflow-hidden shadow-md">
+        {products.map((product, index) => (
+          <div
+            key={product.id}
+            className="max-w-sm bg-gray-800 dark:border-gray-700 rounded-lg overflow-hidden shadow-md"
+          >
             <img 
-              className="rounded-t-lg" 
+              ref={el => imageRefs.current[index] = el} // Ref for the image
+              className="rounded-t-lg slide-in-image opacity-0" 
               src={product.image} 
               alt={product.title} 
             />
@@ -61,6 +83,6 @@ const OurProducts = () => {
       </div>
     </div>
   );
-}
+};
 
 export default OurProducts;

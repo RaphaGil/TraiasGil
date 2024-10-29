@@ -1,0 +1,12 @@
+/* Initial state of the image */
+.slide-in-image {
+  transform: scale(1.2); /* Start slightly zoomed in */
+  opacity: 0; /* Initially hidden */
+  transition: transform 2s ease, opacity 2s ease;
+}
+
+/* Triggered zoom-out effect */
+.slide-in {
+  transform: scale(1); /* Zoom out to normal size */
+  opacity: 1; /* Fade in */
+}

@@ -1,52 +1,102 @@
-import React, { useState, useEffect } from "react";
-import beltData from "../items.json"; // Importing JSON data directly
+import React, { useState, useEffect, useRef } from "react";
+import acessoriesData from "../items.json";
 
 const Acessories = () => {
   const [acessorie, setAcessorie] = useState([]);
+  const [loading, setLoading] = useState(true);
+  const [isHeadingVisible, setIsHeadingVisible] = useState(false);
+  const headingRef = useRef(null);
 
   useEffect(() => {
-    // Filter accessories data to include only items with category 'acessorie'
-    const filteredAcessories = beltData.filter((item) => item.category === "acessorios");
-    setAcessorie(filteredAcessories);
-  }, []); // Empty dependency array ensures this runs only once on component mount
+    const filteredAcessories = acessoriesData.filter((item) => item.category === "acessorios");
+    const acessoriesWithImages = Promise.all(
+      filteredAcessories.map(async (acessorios) => {
+        try {
+          const image = await import(`../assets/img/acessories/${acessorios.image}`);
+          return {
+            ...acessorios,
+            image: image.default,
+          };
+        } catch (error) {
+          console.error(`Erro ao carregar a imagem para o acessorio ${acessorios.id}:`, error);
+          return {
+            ...acessorios,
+            image: '/path/to/default-image.png',
+          };
+        }
+      })
+    );
+
+    acessoriesWithImages
+      .then((data) => {
+        setAcessorie(data);
+        setLoading(false);
+      })
+      .catch((error) => {
+        console.error("Erro ao processar acessórios:", error);
+        setLoading(false);
+      });
+  }, []);
+
+  useEffect(() => {
+    const observer = new IntersectionObserver(
+      (entries) => {
+        const [entry] = entries;
+        if (entry.isIntersecting) {
+          setIsHeadingVisible(true);
+          observer.disconnect();
+        }
+      },
+      { threshold: 0.1 }
+    );
+
+    if (headingRef.current) observer.observe(headingRef.current);
+
+    return () => {
+      if (headingRef.current) observer.unobserve(headingRef.current);
+    };
+  }, []);
 
   return (
     <div className="py-32">
-      <div className="text-center text-3xl mb-5">
-        <h2>Nossos Acessórios</h2>
+      {/* Title with slide-up animation */}
+      <div className="text-5xl text-center mb-5 font-semibold font-serif ml-10">
+        <h2
+          ref={headingRef}
+          className={`inline-block pr-4 transition-transform duration-1000 ease-out ${
+            isHeadingVisible ? "translate-y-0 opacity-100" : "translate-y-10 opacity-0"
+          }`}
+        >
+          Nossos acessórios
+        </h2>
+       
       </div>
-      <div id="acessorios" className="grid grid-cols-2 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-6 p-10">
-        {acessorie.map((item) => (
-          <div key={item.id} className="border border-gray-300 shadow-md rounded-lg">
-            <img
-              className="rounded-t-lg mb-4"
-              src={item.image}
-              alt={`Acessório  ${item.id}`}
-            />
 
-            <div className="flex justify-between items-center p-4">
-              <a href="/home">
-                <h5 className="text-xl font-bold tracking-tight text-gray-900 dark:text-white">
-                  {`Item ${item.id}`}
-                </h5>
-              </a>
-              <span className="text-sm font-light text-gray-900 dark:text-white">
-                R${item.price.toFixed(2)}
-              </span>
+      {loading ? (
+        <div className="text-center text-xl">Carregando...</div>
+      ) : (
+        <div id="acessorios" className="grid grid-cols-2 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-6 p-10">
+          {acessorie.map((item) => (
+            <div key={item.id} className="shadow-sm rounded-sm transform transition-transform duration-300 hover:scale-105 bg-gray-800">
+              <img
+                className=""
+                src={item.image}
+                alt={`Acessório  ${item.id}`}
+              />
+              <div className="pt-2">
+                <a href="/home">
+                  <h5 className="mb-2 text-md font-bold text-white">
+                    {`Item ${item.id}`}
+                  </h5>
+                </a>
+                <div className="mb-3 text-sm font-normal text-gray-400">
+                  R${item.price.toFixed(2)}
+                </div>
+              </div>
             </div>
-
-            <div className="flex flex-col space-y-32 px-12 sm:flex-row sm:justify-center mt-4">
-              <a
-                href="/home"
-                className="inline-flex justify-center items-center py-3 px-5 text-base font-medium text-center text-gray-900 rounded-lg bg-amber-300
-                hover:bg-amber-200 focus:ring-4 focus:ring-amber-200 dark:focus:ring-amber-200 mb-6"
-              >
-                Comprar
-              </a>
-            </div>
-          </div>
-        ))}
-      </div>
+          ))}
+        </div>
+      )}
     </div>
   );
 };

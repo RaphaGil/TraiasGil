@@ -123,37 +123,37 @@
  
   {
     "id": 23,
-    "image": "./assets/img/acessories/acessories.png",
+    "image": "acessories.png",
     "price": 0.00,
     "category": "acessorios"
   },
   {
     "id": 24,
-    "image": "./assets/img/acessories/acessories1.png",
+    "image": "acessories1.png",
     "price": 150.00,
     "category": "acessorios"
   },
   {
     "id": 25,
-    "image": "./assets/img/acessories/acessories2.png",
+    "image": "acessories2.png",
     "price": 150.00,
     "category": "acessorios"
   },
   {
     "id": 26,
-    "image": "./assets/img/acessories/acessories3.png",
+    "image": "acessories3.png",
     "price": 150.00,
     "category": "acessorios"
   },
   {
     "id": 27,
-    "image": "./assets/img/acessories/acessories4.png",
+    "image": "acessories4.png",
     "price": 200.00,
     "category": "acessorios"
   },
   {
     "id": 28,
-    "image": "./assets/img/acessories/acessories5.png",
+    "image": "acessories5.png",
     "price": 150.00,
     "category": "acessorios"
   },
