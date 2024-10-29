@@ -1,7 +1,7 @@
 {
   "files": {
-    "main.css": "/TraiasGil/static/css/main.fd6925d3.css",
-    "main.js": "/TraiasGil/static/js/main.25c6d13c.js",
+    "main.css": "/TraiasGil/static/css/main.1b6553dc.css",
+    "main.js": "/TraiasGil/static/js/main.7ab16af0.js",
     "static/js/502.f350e0d8.chunk.js": "/TraiasGil/static/js/502.f350e0d8.chunk.js",
     "static/js/316.b2781ebd.chunk.js": "/TraiasGil/static/js/316.b2781ebd.chunk.js",
     "static/js/381.437c3148.chunk.js": "/TraiasGil/static/js/381.437c3148.chunk.js",
@@ -62,12 +62,12 @@
     "static/media/acessories4.png": "/TraiasGil/static/media/acessories4.df8ad521c35546b1741f.png",
     "static/media/logo.png": "/TraiasGil/static/media/logo.308613dff862d750e0bd.png",
     "index.html": "/TraiasGil/index.html",
-    "main.fd6925d3.css.map": "/TraiasGil/static/css/main.fd6925d3.css.map",
-    "main.25c6d13c.js.map": "/TraiasGil/static/js/main.25c6d13c.js.map",
+    "main.1b6553dc.css.map": "/TraiasGil/static/css/main.1b6553dc.css.map",
+    "main.7ab16af0.js.map": "/TraiasGil/static/js/main.7ab16af0.js.map",
     "488.9c92ff38.chunk.js.map": "/TraiasGil/static/js/488.9c92ff38.chunk.js.map"
   },
   "entrypoints": [
-    "static/css/main.fd6925d3.css",
-    "static/js/main.25c6d13c.js"
+    "static/css/main.1b6553dc.css",
+    "static/js/main.7ab16af0.js"
   ]
 }
