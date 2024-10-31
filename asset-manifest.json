@@ -1,7 +1,7 @@
 {
   "files": {
     "main.css": "/TraiasGil/static/css/main.f2c12e64.css",
-    "main.js": "/TraiasGil/static/js/main.41b0d643.js",
+    "main.js": "/TraiasGil/static/js/main.060710a4.js",
     "static/js/502.ee610da7.chunk.js": "/TraiasGil/static/js/502.ee610da7.chunk.js",
     "static/js/316.051c8753.chunk.js": "/TraiasGil/static/js/316.051c8753.chunk.js",
     "static/js/381.98b9fefa.chunk.js": "/TraiasGil/static/js/381.98b9fefa.chunk.js",
@@ -81,11 +81,11 @@
     "static/media/logo.png": "/TraiasGil/static/media/logo.308613dff862d750e0bd.png",
     "index.html": "/TraiasGil/index.html",
     "main.f2c12e64.css.map": "/TraiasGil/static/css/main.f2c12e64.css.map",
-    "main.41b0d643.js.map": "/TraiasGil/static/js/main.41b0d643.js.map",
+    "main.060710a4.js.map": "/TraiasGil/static/js/main.060710a4.js.map",
     "488.7a876c9d.chunk.js.map": "/TraiasGil/static/js/488.7a876c9d.chunk.js.map"
   },
   "entrypoints": [
     "static/css/main.f2c12e64.css",
-    "static/js/main.41b0d643.js"
+    "static/js/main.060710a4.js"
   ]
 }
