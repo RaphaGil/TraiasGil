@@ -6,7 +6,7 @@ const Hero = () => {
   return (
     <div>
       <section
-        className="relative bg-center bg-fixed bg-cover h-screen hero-background"
+        className="relative bg-center md:bg-fixed bg-cover h-screen hero-background"
         style={{ backgroundImage: `url(${heroImage})` }}
       >
         {/* Black overlay */}

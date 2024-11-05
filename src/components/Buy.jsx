@@ -6,7 +6,7 @@ const Buy = () => {
     <div className="relative mb-10 h-screen flex items-center justify-center">
       {/* Background Image */}
       <div
-        className="absolute inset-0 w-full h-full bg-cover bg-fixed bg-center"
+        className="absolute inset-0 w-full h-full bg-cover md:bg-fixed bg-center"
         style={{ backgroundImage: `url(${tools})` }}
       />
 

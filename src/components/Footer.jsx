@@ -3,6 +3,7 @@ import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import { faPinterest, faCcMastercard, faCcVisa, faCcAmex, faCcDinersClub, faCcDiscover } from '@fortawesome/free-brands-svg-icons'; 
 import { FaInstagram, FaWhatsapp } from "react-icons/fa"; // Importing icons// Import the required icons
 import Logo from "../assets/logo.png"; 
+import { Link } from "react-scroll";
 
 const Footer = () => {
   return (
@@ -11,12 +12,12 @@ const Footer = () => {
         {/* Flex container for logo and links */}
         <div className="flex flex-col items-center md:flex-row md:justify-between">
           <img src={Logo} className="h-44 mb-4 md:mb-0" alt="Flowbite Logo" />
-          <ul className="flex flex-wrap items-center justify-center mb-8 text-sm font-medium text-gray-200 sm:mb-0 ">
+          <ul className="flex flex-wrap items-center justify-center text-sm font-medium text-gray-200  ">
             <li>
               <a href="#" className="hover:underline hover:text-amber-200 me-4 md:me-6">Sobre</a>
             </li>
             <li>
-              <a href="#" className="hover:underline hover:text-amber-200 me-4 md:me-6">Produtos</a>
+              <Link to='produtos' smooth={true} duration={500} className="hover:underline hover:text-amber-200 me-4 md:me-6">Produtos</Link>
             </li>
           
             <li>
@@ -25,7 +26,7 @@ const Footer = () => {
           </ul>
            
         </div>
-        <div className='flex justify-center gap-4 mb-10'>
+        <div className='flex justify-center gap-4 mb-5 mt-5'>
           <a href="https://www.instagram.com/gustavo_gil321?igsh=MTQybGt5ajM5OXppOA==" className="text-white hover:text-amber-300 dark:hover:text-white" aria-label="Instagram">
             <FaInstagram size={25} />
           </a>
@@ -48,8 +49,8 @@ const Footer = () => {
         
         <hr className="my-6 border border-amber-200 sm:mx-auto lg:my-8" />
         
-        <span className="block text-sm text-gray-500 sm:text-center dark:text-gray-400">
-          © 2024 <a href="https://flowbite.com/" className="hover:underline">Traias Gil</a>. 
+        <span className="block text-sm text-gray-500 sm:text-center pb-10">
+          © 2024 <a href="https://flowbite.com/" className=" ">Traias Gil</a>. 
           Todos os direitos reservados.
         </span>
       </div>

@@ -1,112 +1,111 @@
-import React, { useState, useEffect } from "react";
-import Logo from "../assets/logo.png"; 
-import { FaInstagram, FaWhatsapp } from "react-icons/fa"; // Importing icons
+import React, { useState } from "react";
+import Logo from "../assets/logo.png";
+import { FaInstagram, FaWhatsapp } from "react-icons/fa";
+import { Link } from "react-scroll";
 
 const Navbar = () => {
-  const [scrolled, setScrolled] = useState(false);
-  const [menuOpen, setMenuOpen] = useState(false); // State to manage menu open/close
-
-  useEffect(() => {
-    const handleScroll = () => {
-      setScrolled(window.scrollY > 50); // Adjust the scroll threshold as needed
-    };
-
-    window.addEventListener("scroll", handleScroll);
-    
-    return () => {
-      window.removeEventListener("scroll", handleScroll);
-    };
-  }, []);
+  const [menuOpen, setMenuOpen] = useState(false);
 
   const toggleMenu = () => {
-    setMenuOpen((prev) => !prev); // Toggle the menu open/close state
+    setMenuOpen((prev) => !prev);
   };
 
   return (
-    <nav className={`absolute w-full z-30 top-0 pr-4 transition duration-300 ${scrolled ? "bg-brown-800 bg-opacity-80" : "bg-transparent"}`}>
-      <div className="max-w-screen-xl flex flex-wrap items-center justify-between mx-auto">
-        <a href="/home" className="flex items-center">
+    <nav className="absolute w-full z-30 top-0 transition duration-300">
+      
+      <div className="max-w-screen-xl flex flex-wrap items-center justify-between">
+        {/* Logo */}
+        <Link to="hero" smooth={true} duration={500} className="flex items-center">
           <img src={Logo} className="h-36" alt="TraiasGil Logo" />
-        </a>
+        </Link>
 
-        <div className="flex md:order-2 space-x-4 md:space-x-6 rtl:space-x-reverse">
-          {/* Social Media Icons */}
-          <a href="https://www.instagram.com/gustavo_gil321?igsh=MTQybGt5ajM5OXppOA==" className="text-white hover:text-amber-300 dark:hover:text-white" aria-label="Instagram">
+       
+        <div className="hidden md:flex">
+          {/* NavLinks */}
+          <ul className="flex flex-col p-4 md:p-0 font-normal border border-gray-100 rounded-lg md:space-x-8 rtl:space-x-reverse md:flex-row mt-0 md:border-0">
+            <li>
+              <Link to="sobre" smooth={true} duration={500} className="block px-3 text-white bg-amber-300 rounded md:bg-transparent md:text-amber-300 md:p-0" aria-current="page">
+                Sobre
+              </Link>
+            </li>
+            <li>
+              <Link to="produtos" smooth={true} duration={500} className="block py-2 px-3 text-white rounded hover:bg-gray-100 hover:bg-transparent hover:text-amber-300 md:p-0">
+                Produtos
+              </Link>
+            </li>
+            <li>
+              <a href="https://wa.me/+5519993650398" target="_blank" rel="noopener noreferrer" className="block py-2 px-3 text-white rounded hover:bg-white hover:bg-transparent hover:text-amber-300 md:p-0">
+                Contato
+              </a>
+            </li>
+          </ul>
+        </div>
+
+
+        <div className="flex gap-x-3 pr-4">
+          {/* Icons */}
+          <a href="https://www.instagram.com/traias_gil?igsh=OGdzdzNuZWQxamJo" className="text-white hover:text-amber-300" aria-label="Instagram">
             <FaInstagram size={20} />
           </a>
-          <a href="https://wa.me/+5519993650398" target="_blank" rel="noopener noreferrer" className="text-white hover:text-amber-300 dark:hover:text-white" aria-label="WhatsApp">
+          <a href="https://wa.me/+5519993650398" target="_blank" rel="noopener noreferrer" className="text-white hover:text-amber-300" aria-label="WhatsApp">
             <FaWhatsapp size={20} />
           </a>
-          {/* Menu toggle button (for mobile) */}
+        </div>
+
+
+        <button
+          type="button"
+          onClick={toggleMenu}
+          className="inline-flex items-center pr-2 w-10 justify-center text-sm text-white hover:text-amber-300 md:hidden focus:outline-none"
+          aria-expanded={menuOpen}
+          aria-label="Toggle navigation"
+        >
+          <span className="sr-only">{menuOpen ? "Close menu" : "Open main menu"}</span>
+          {menuOpen ? (
+            <svg className="w-6 h-6" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+              <path strokeLinecap="round" strokeLinejoin="round" strokeWidth="2" d="M6 18L18 6M6 6l12 12" />
+            </svg>
+          ) : (
+            <svg className="w-5 h-5" aria-hidden="true" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 17 14">
+              <path stroke="currentColor" strokeLinecap="round" strokeLinejoin="round" strokeWidth="2" d="M1 1h15M1 7h15M1 13h15" />
+            </svg>
+          )}
+        </button>
+      </div>
+
+      {/* Mobile menu */}
+      {menuOpen && (
+        <div className="fixed inset-0 bg-white z-40 flex flex-col p-4 font-normal">
           <button
             type="button"
-            onClick={toggleMenu} // Add onClick handler to toggle menu
-            className="inline-flex items-center pr-2 w-10 justify-center text-sm text-white hover:text-amber-300 md:hidden focus:outline-none dark:text-gray-400 dark:hover:bg-gray-700 dark:focus:ring-gray-600"
-            aria-controls="navbar-sticky"
-            aria-expanded={menuOpen} // Reflect the menu open state
-            aria-label="Toggle navigation"
+            onClick={toggleMenu}
+            className="self-end text-gray-900 hover:text-amber-300 mb-4"
+            aria-label="Close menu"
           >
-            <span className="sr-only">Open main menu</span>
-            <svg
-              className="w-5 h-5"
-              aria-hidden="true"
-              xmlns="http://www.w3.org/2000/svg"
-              fill="none"
-              viewBox="0 0 17 14"
-            >
-              <path
-                stroke="currentColor"
-                strokeLinecap="round"
-                strokeLinejoin="round"
-                strokeWidth="2"
-                d="M1 1h15M1 7h15M1 13h15"
-              />
+            <svg className="w-6 h-6" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+              <path strokeLinecap="round" strokeLinejoin="round" strokeWidth="2" d="M6 18L18 6M6 6l12 12" />
             </svg>
           </button>
-        </div>
 
-        {/* Mobile menu */}
-        <div className={`md:hidden ${menuOpen ? "block" : "hidden"}`} id="navbar-sticky">
-          <ul className="flex flex-col p-4 font-normal border border-gray-100 rounded-lg dark:bg-gray-200">
+          <ul className="flex flex-col mt-10">
             <li>
-              <a href="/sobre" className="block py-2 px-3 text-white bg-amber-300 rounded md:bg-transparent md:text-amber-300 md:p-0 md:dark:text-amber-300" aria-current="page">
+              <Link to="sobre" smooth={true} duration={500} onClick={toggleMenu} className="block py-2 px-3 text-gray-900 hover:bg-amber-300 hover:text-white rounded text-left" aria-current="page">
                 Sobre
-              </a>
+              </Link>
             </li>
             <li>
-              <a href="/produtos" className="block py-2 px-3 text-white rounded hover:bg-gray-100 md:hover:bg-transparent md:hover:text-amber-300 md:p-0 md:dark:hover:text-amber-300 dark:text-white dark:hover:bg-gray-700 dark:hover:text-white md:dark:hover:bg-transparent dark:border-gray-700">
+              <Link to="produtos" smooth={true} duration={500} onClick={toggleMenu} className="block py-2 px-3 text-gray-900 hover:bg-amber-300 hover:text-white rounded mt-2 text-left">
                 Produtos
-              </a>
+              </Link>
             </li>
             <li>
-              <a href="https://wa.me/+5519993650398" target="_blank" rel="noopener noreferrer" className="block py-2 px-3 text-white rounded hover:bg-white md:hover:bg-transparent md:hover:text-amber-300 md:p-0 md:dark:hover:text-amber-300 dark:text-white dark:hover:bg-gray-700 dark:hover:text-white md:dark:hover:bg-transparent dark:border-gray-700">
+              <a href="https://wa.me/+5519993650398" target="_blank" rel="noopener noreferrer" className="block py-2 px-3 text-gray-900 hover:bg-amber-300 hover:text-white rounded text-left">
                 Contato
               </a>
             </li>
           </ul>
         </div>
-
-        {/* Desktop menu */}
-        <div className="hidden md:flex md:order-1" id="navbar-sticky">
-          <ul className="flex flex-col p-4 md:p-0 mt-4 font-normal border border-gray-100 rounded-lg md:space-x-8 rtl:space-x-reverse md:flex-row md:mt-0 md:border-0 dark:bg-gray-200">
-            <li>
-              <a href="/sobre" className="block py-2 px-3 text-white bg-amber-300 rounded md:bg-transparent md:text-amber-300 md:p-0 md:dark:text-amber-300" aria-current="page">
-                Sobre
-              </a>
-            </li>
-            <li>
-              <a href="/produtos" className="block py-2 px-3 text-white rounded hover:bg-gray-100 md:hover:bg-transparent md:hover:text-amber-300 md:p-0 md:dark:hover:text-amber-300 dark:text-white dark:hover:bg-gray-700 dark:hover:text-white md:dark:hover:bg-transparent dark:border-gray-700">
-                Produtos
-              </a>
-            </li>
-            <li>
-              <a href="https://wa.me/+5519993650398" target="_blank" rel="noopener noreferrer" className="block py-2 px-3 text-white rounded hover:bg-white md:hover:bg-transparent md:hover:text-amber-300 md:p-0 md:dark:hover:text-amber-300 dark:text-white dark:hover:bg-gray-700 dark:hover:text-white md:dark:hover:bg-transparent dark:border-gray-700">
-                Contato
-              </a>
-            </li>
-          </ul>
-        </div>
-      </div>
+      )}
     </nav>
   );
 };

@@ -2,175 +2,229 @@
   {
     "id": 1,
     "image": "belts1.png",
-    "price": 400.00,
+    "price": 100.00,
     "category": "cinto"
   },
   {
     "id": 2,
     "image": "belts2.png",
-    "price": 400.00,
+    "price": 190.00,
     "category": "cinto"
   },
   {
     "id": 3,
     "image": "belts3.png",
-    "price": 250.00,
+    "price": 450.00,
     "category": "cinto"
   },
   {
     "id": 4,
     "image": "belts4.png",
-    "price": 250.00,
+    "price": 100.00,
     "category": "cinto"
   },
   {
     "id": 5,
     "image": "belts5.png",
-    "price": 250.00,
+    "price": 450.00,
     "category": "cinto"
   },
   {
     "id": 6,
     "image": "belts6.png",
-    "price": 400.00,
+    "price": 450.00,
     "category": "cinto"
   },
   {
     "id": 7,
     "image": "belts7.png",
-    "price": 250.00,
+    "price": 100.00,
     "category": "cinto"
   },
   {
     "id": 8,
     "image": "belts8.png",
-    "price": 400.00,
+    "price": 450.00,
     "category": "cinto"
   },
   {
     "id": 9,
     "image": "belts9.png",
-    "price": 400.00,
+    "price": 190.00,
     "category": "cinto"
   },
   {
     "id": 10,
     "image": "belts10.png",
-    "price": 250.00,
+    "price": 450.00,
     "category": "cinto"
   },
   {
     "id": 11,
     "image": "belts11.png",
-    "price": 400.00,
+    "price": 190.00,
     "category": "cinto"
   },
   {
     "id": 12,
     "image": "belts12.png",
-    "price": 250.00,
+    "price": 450.00,
     "category": "cinto"
   },
 
   {
     "id": 13,
     "image": "belts13.png",
-    "price": 400.00,
+    "price": 450.00,
     "category": "cinto"
   },
   {
     "id": 14,
     "image": "belts14.png",
-    "price": 400.00,
+    "price": 450.00,
     "category": "cinto"
   },
   {
     "id": 15,
     "image": "belts15.png",
-    "price": 250.00,
+    "price": 100.00,
     "category": "cinto"
   },
   {
     "id": 16,
     "image": "belts16.png",
-    "price": 250.00,
+    "price": 450.00,
     "category": "cinto"
   },
   {
     "id": 17,
     "image": "belts17.png",
-    "price": 250.00,
+    "price": 100.00,
     "category": "cinto"
   },
   {
     "id": 18,
     "image": "belts18.png",
-    "price": 400.00,
+    "price": 190.00,
     "category": "cinto"
   },
   {
     "id": 19,
     "image": "belts19.png",
-    "price": 400.00,
+    "price": 190.00,
     "category": "cinto"
   },
   {
     "id": 20,
     "image": "belts20.png",
-    "price": 400.00,
+    "price": 450.00,
+    "category": "cinto"
+  },
+  {
+    "id": 21,
+    "image": "belts21.png",
+    "price": 450.00,
+    "category": "cinto"
+  },
+  {
+    "id": 22,
+    "image": "belts22.png",
+    "price": 450.00,
+    "category": "cinto"
+  },
+  {
+    "id": 23,
+    "image": "belts23.png",
+    "price": 190.00,
+    "category": "cinto"
+  },
+  {
+    "id": 24,
+    "image": "belts24.png",
+    "price": 190.00,
+    "category": "cinto"
+  },
+  {
+    "id": 25,
+    "image": "belts25.png",
+    "price": 100.00,
+    "category": "cinto"
+  },
+  {
+    "id": 26,
+    "image": "belts26.png",
+    "price": 190.00,
+    "category": "cinto"
+  },
+  {
+    "id": 27,
+    "image": "belts27.png",
+    "price": 450.00,
     "category": "cinto"
   },
  
   {
-    "id": 23,
+    "id": 28,
     "image": "acessories.png",
-    "price": 0.00,
+    "price": 50.00,
     "category": "acessorios"
   },
   {
-    "id": 24,
+    "id": 29,
     "image": "acessories1.png",
-    "price": 150.00,
+    "price": 50.00,
     "category": "acessorios"
   },
   {
-    "id": 25,
+    "id": 30,
     "image": "acessories2.png",
-    "price": 150.00,
+    "price": 100.00,
     "category": "acessorios"
   },
   {
-    "id": 26,
+    "id": 31,
     "image": "acessories3.png",
-    "price": 150.00,
-    "category": "acessorios"
-  },
-  {
-    "id": 27,
-    "image": "acessories4.png",
     "price": 200.00,
     "category": "acessorios"
   },
   {
-    "id": 28,
+    "id": 32,
+    "image": "acessories4.png",
+    "price": 250.00,
+    "category": "acessorios"
+  },
+  {
+    "id": 33,
     "image": "acessories5.png",
     "price": 150.00,
     "category": "acessorios"
   },
+  {
+    "id": 34,
+    "image": "acessories6.png",
+    "price": 200.00,
+    "category": "acessorios"
+  },
+  {
+    "id": 35,
+    "image": "acessories7.png",
+    "price": 200.00,
+    "category": "acessorios"
+  },
 {
-  "id": 29,
+  "id": 34,
   "image": "./assets/img/Traia.jpg",
   "price": 300.00,
   "category": "traias"
 },
 {
-  "id": 30,
+  "id": 35,
   "image": "./assets/img/Traia1.jpg",
   "price": 300.00,
   "category": "traias"
 },
 {
-  "id": 31,
+  "id": 36,
   "image": "./assets/img/TraiasCavalos.jpg",
   "price": 500.00,
   "category": "traias"

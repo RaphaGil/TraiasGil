@@ -40,11 +40,11 @@ const Belts = () => {
 
   return (
     <Layout>
-      <div className="py-32 w-full">
+      <div className="py-32 w-full" id='belts'>
         {/* Slide-up effect applied to title */}
-        <div className="text-5xl text-center font-semibold font-serif text-left ml-10 slide-up">
-          <h2 className="inline pr-4">Nossos</h2>
-          <h2 className="inline">cintos</h2>
+        <div className="text-xl text-center font-semibold font-serif  slide-up">
+        <h2 className="mb-8 text-2xl font-sans font-bold tracking-extra-wide text-gray-900">NOSSOS CINTOS</h2>
+
         </div>
 
         {loading ? (
@@ -58,7 +58,7 @@ const Belts = () => {
               {belts.map((belt) => (
                 <div
                   key={belt.id}
-                  className="shadow-md rounded-md transform transition-transform duration-300 hover:scale-105 bg-gray-800"
+                  className="shadow-md rounded-md transform transition-transform duration-300 hover:scale-105 bg-gray-800 hover:bg-amber-300 hover:text-gray-900 text-white"
                 >
                   <img
                     className=""
@@ -66,9 +66,9 @@ const Belts = () => {
                     alt={`Cinto ${belt.id}`}
                     loading="lazy"
                   />
-                  <div className="pt-2 text-center">
-                    <h5 className="mb-2 text-md font-bold text-white">{`Item ${belt.id}`}</h5>
-                    <p className="mb-3 text-sm font-normal text-gray-400">
+                  <div className="pt-2 text-center hover:text-gray-900  ">
+                    <h5 className="mb-2 text-md font-bold ">{`Item ${belt.id}`}</h5>
+                    <p className="mb-3 text-sm font-normal ">
                       {belt.price ? `R$${belt.price.toFixed(2)}` : "Preço indisponível"}
                     </p>
                   </div>
