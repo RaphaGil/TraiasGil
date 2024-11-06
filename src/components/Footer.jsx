@@ -12,7 +12,7 @@ const Footer = () => {
         {/* Flex container for logo and links */}
         <div className="flex flex-col items-center md:flex-row md:justify-between">
           <img src={Logo} className="h-44 mb-4 md:mb-0" alt="Flowbite Logo" />
-          <ul className="flex flex-wrap items-center justify-center text-sm font-medium text-gray-200  ">
+          <ul className="flex flex-wrap items-center justify-center text-sm font-medium text-gray-100  ">
             <li>
               <a href="#" className="hover:underline hover:text-amber-200 me-4 md:me-6">Sobre</a>
             </li>
@@ -23,10 +23,12 @@ const Footer = () => {
             <li>
             <a href="https://wa.me/+5519993650398" target="_blank" rel="noopener noreferrer" className="hover:underline hover:text-amber-200">Contato</a>
             </li>
+       
           </ul>
-           
-        </div>
-        <div className='flex justify-center gap-4 mb-5 mt-5'>
+          <div className='text-sm m-10'>
+         <p className='text-white '>Localização: Piracicaba - SP</p>
+          <p className='text-white '>Contato: 019 99365 0398</p>
+          <div className='flex justify-center space-x-3 mt-4'>
           <a href="https://www.instagram.com/gustavo_gil321?igsh=MTQybGt5ajM5OXppOA==" className="text-white hover:text-amber-300 dark:hover:text-white" aria-label="Instagram">
             <FaInstagram size={25} />
           </a>
@@ -34,6 +36,18 @@ const Footer = () => {
             <FaWhatsapp size={25} />
           </a>
           </div>
+        </div>
+        </div>
+        
+
+        {/* <div className='flex justify-center gap-4 mb-5 mt-5'>
+          <a href="https://www.instagram.com/gustavo_gil321?igsh=MTQybGt5ajM5OXppOA==" className="text-white hover:text-amber-300 dark:hover:text-white" aria-label="Instagram">
+            <FaInstagram size={25} />
+          </a>
+          <a href="https://wa.me/+5519993650398" target="_blank" rel="noopener noreferrer" className="text-white hover:text-amber-300 dark:hover:text-white" aria-label="WhatsApp">
+            <FaWhatsapp size={25} />
+          </a>
+          </div> */}
         {/* Flex container for icons */}
         <div className='flex justify-evenly items-center  py-4'>
           <div>
@@ -49,7 +63,7 @@ const Footer = () => {
         
         <hr className="my-6 border border-amber-200 sm:mx-auto lg:my-8" />
         
-        <span className="block text-sm text-gray-500 sm:text-center pb-10">
+        <span className="block text-sm text-gray-200 sm:text-center pb-10">
           © 2024 <a href="https://flowbite.com/" className=" ">Traias Gil</a>. 
           Todos os direitos reservados.
         </span>

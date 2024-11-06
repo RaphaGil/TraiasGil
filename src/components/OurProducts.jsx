@@ -64,7 +64,7 @@ const OurProducts = () => {
               alt={product.title} 
             />
             <div className="p-5">
-              <h5 className="mb-2 text-2xl font-bold tracking-tight text-white">{product.title}</h5>
+              <h2 className="mb-2 text-2xl font-bold tracking-tight text-white">{product.title}</h2>
               <p className="mb-3 font-normal text-gray-400">{product.description}</p>
               
               {product.href ? (
